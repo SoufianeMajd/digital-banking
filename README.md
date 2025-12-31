@@ -1,6 +1,6 @@
 # 🏦 Digital Banking Backend
 
-![Java](https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=java)
+![Java](https://img.shields.io/badge/Java-21-orange?style=for-the-badge&logo=java)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.2.0-green?style=for-the-badge&logo=spring-boot)
 ![Maven](https://img.shields.io/badge/Maven-Build-blue?style=for-the-badge&logo=apache-maven)
 ![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
@@ -97,7 +97,7 @@ classDiagram
 ## 🛠️ Tech Stack
 
 *   **Core Framework**: [Spring Boot 3.2.0](https://spring.io/projects/spring-boot)
-*   **Language**: Java 17
+*   **Language**: Java 21
 *   **Database**: H2 Database (In-Memory for Dev/Test), compatible with MySQL/PostgreSQL.
 *   **ORM**: Spring Data JPA (Hibernate).
 *   **Boilerplate Reduction**: [Lombok](https://projectlombok.org/).
