@@ -1,0 +1,26 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-white pt-3 pb-3">
+                    <h5 class="card-title text-muted mb-0">New Customer</h5>
+                </div>
+                <div class="card-body p-4">
+                    <form [formGroup]="newCustomerForm" (ngSubmit)="handleSaveCustomer()">
+                        <div class="mb-3">
+                            <label class="form-label text-secondary">Name:</label>
+                            <input type="text" formControlName="name" class="form-control p-3">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label text-secondary">Email:</label>
+                            <input type="email" formControlName="email" class="form-control p-3">
+                        </div>
+                        <button [disabled]="!newCustomerForm.valid" type="submit"
+                            class="btn btn-info text-white w-25 p-2"
+                            style="background-color: #0dcaf0; border:none;">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

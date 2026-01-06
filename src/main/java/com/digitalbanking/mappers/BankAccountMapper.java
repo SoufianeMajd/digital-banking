@@ -9,7 +9,6 @@ import com.digitalbanking.entities.CurrentAccount;
 import com.digitalbanking.entities.Customer;
 import com.digitalbanking.entities.SavingAccount;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
 public interface BankAccountMapper {

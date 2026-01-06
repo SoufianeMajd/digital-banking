@@ -55,4 +55,21 @@ public class DigitalBankingApplication {
         };
     }
 
+    @Bean
+    CommandLineRunner saveUsers(com.digitalbanking.security.services.AccountService accountService) {
+        return args -> {
+            accountService.addNewRole(new com.digitalbanking.security.entities.AppRole(null, "USER"));
+            accountService.addNewRole(new com.digitalbanking.security.entities.AppRole(null, "ADMIN"));
+
+            accountService.addNewUser(new com.digitalbanking.security.entities.AppUser("user1", "user1", "1234",
+                    "user1@gmail.com", new java.util.ArrayList<>()));
+            accountService.addNewUser(new com.digitalbanking.security.entities.AppUser("admin", "admin", "1234",
+                    "admin@gmail.com", new java.util.ArrayList<>()));
+
+            accountService.addRoleToUser("user1", "USER");
+            accountService.addRoleToUser("admin", "USER");
+            accountService.addRoleToUser("admin", "ADMIN");
+        };
+    }
+
 }
