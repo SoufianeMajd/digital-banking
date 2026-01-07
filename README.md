@@ -173,6 +173,7 @@ The application is seeded with the following users:
 
 ## 🎨 Screenshots
 ![Application Screenshot](screens/app-screenshot.png)
+![Customers Screenshot](screens/customers-screenshot.png)
 
 ## 📄 License
 This project is licensed under the MIT License.
