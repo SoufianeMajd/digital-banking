@@ -1,0 +1,5375 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.digitalbanking:digital-banking >-----------------
+[INFO] Building digital-banking 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.2.0:run (default-cli) > test-compile @ digital-banking >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ digital-banking ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ digital-banking ---
+[INFO] Changes detected - recompiling the module! :input tree
+[INFO] Compiling 39 source files with javac [debug release 21] to target\classes
+[WARNING] /D:/JAVA/Digital Banking/src/main/java/com/digitalbanking/mappers/BankAccountMapper.java:[17,14] Unmapped target property: "bankAccounts".
+[WARNING] /D:/JAVA/Digital Banking/src/main/java/com/digitalbanking/mappers/BankAccountMapper.java:[19,27] Unmapped target properties: "type, customerDTO".
+[WARNING] /D:/JAVA/Digital Banking/src/main/java/com/digitalbanking/mappers/BankAccountMapper.java:[21,20] Unmapped target properties: "currency, customer, accountOperations".
+[WARNING] /D:/JAVA/Digital Banking/src/main/java/com/digitalbanking/mappers/BankAccountMapper.java:[23,26] Unmapped target properties: "type, customerDTO".
+[WARNING] /D:/JAVA/Digital Banking/src/main/java/com/digitalbanking/mappers/BankAccountMapper.java:[25,19] Unmapped target properties: "currency, customer, accountOperations".
+[WARNING] /D:/JAVA/Digital Banking/src/main/java/com/digitalbanking/mappers/BankAccountMapper.java:[29,22] Unmapped target property: "bankAccount".
+[WARNING] Implicitly compiled files were not subject to annotation processing.
+  Use -implicit to specify a policy for implicit compilation.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ digital-banking ---
+[INFO] skip non existing resourceDirectory D:\JAVA\Digital Banking\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ digital-banking ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.2.0:run (default-cli) < test-compile @ digital-banking <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.0:run (default-cli) @ digital-banking ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2026-01-07T12:12:17.038+01:00  INFO 22908 --- [digital-banking] [           main] c.d.DigitalBankingApplication            : Starting DigitalBankingApplication using Java 21.0.8 with PID 22908 (D:\JAVA\Digital Banking\target\classes started by pc in D:\JAVA\Digital Banking)
+2026-01-07T12:12:17.040+01:00  INFO 22908 --- [digital-banking] [           main] c.d.DigitalBankingApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-01-07T12:12:19.283+01:00  INFO 22908 --- [digital-banking] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-07T12:12:19.525+01:00  INFO 22908 --- [digital-banking] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 217 ms. Found 5 JPA repository interfaces.
+2026-01-07T12:12:21.068+01:00  INFO 22908 --- [digital-banking] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2026-01-07T12:12:21.088+01:00  INFO 22908 --- [digital-banking] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-07T12:12:21.088+01:00  INFO 22908 --- [digital-banking] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-01-07T12:12:21.202+01:00  INFO 22908 --- [digital-banking] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-07T12:12:21.207+01:00  INFO 22908 --- [digital-banking] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4076 ms
+2026-01-07T12:12:21.341+01:00  INFO 22908 --- [digital-banking] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-07T12:12:21.709+01:00  INFO 22908 --- [digital-banking] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:digitalbankingdb user=SA
+2026-01-07T12:12:21.712+01:00  INFO 22908 --- [digital-banking] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-07T12:12:21.728+01:00  INFO 22908 --- [digital-banking] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:digitalbankingdb'
+2026-01-07T12:12:21.981+01:00  INFO 22908 --- [digital-banking] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-07T12:12:22.085+01:00  INFO 22908 --- [digital-banking] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-01-07T12:12:22.141+01:00  INFO 22908 --- [digital-banking] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-07T12:12:22.851+01:00  INFO 22908 --- [digital-banking] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-07T12:12:22.920+01:00  WARN 22908 --- [digital-banking] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-07T12:12:24.780+01:00  INFO 22908 --- [digital-banking] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    create table account_operation (
+        id bigint generated by default as identity,
+        amount float(53) not null,
+        description varchar(255),
+        operation_date timestamp(6),
+        type varchar(255) check (type in ('DEBIT','CREDIT')),
+        bank_account_id varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table app_role (
+        id bigint generated by default as identity,
+        role_name varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table app_user (
+        user_id varchar(255) not null,
+        email varchar(255),
+        password varchar(255),
+        username varchar(255),
+        primary key (user_id)
+    )
+Hibernate: 
+    create table app_user_roles (
+        app_user_user_id varchar(255) not null,
+        roles_id bigint not null
+    )
+Hibernate: 
+    create table bank_account (
+        type varchar(4) not null,
+        id varchar(255) not null,
+        balance float(53) not null,
+        create_date timestamp(6),
+        currency varchar(255),
+        status varchar(255) check (status in ('CREATED','ACTIVATED','SUSPENDED')),
+        over_draft float(53),
+        interest_rate float(53),
+        customer_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    create table customer (
+        id bigint generated by default as identity,
+        email varchar(255),
+        name varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists app_user 
+       drop constraint if exists UK_3k4cplvh82srueuttfkwnylq0
+Hibernate: 
+    alter table if exists app_user 
+       add constraint UK_3k4cplvh82srueuttfkwnylq0 unique (username)
+Hibernate: 
+    alter table if exists account_operation 
+       add constraint FKmimm8esca3p6ux3s6bdwvu1cn 
+       foreign key (bank_account_id) 
+       references bank_account
+Hibernate: 
+    alter table if exists app_user_roles 
+       add constraint FK1pfb2loa8so5oi6ak7rh6enva 
+       foreign key (roles_id) 
+       references app_role
+Hibernate: 
+    alter table if exists app_user_roles 
+       add constraint FK7j68xnb7cl41m3b1leb0b186g 
+       foreign key (app_user_user_id) 
+       references app_user
+Hibernate: 
+    alter table if exists bank_account 
+       add constraint FKj818ht4ban0c4uw4bmsbf3jme 
+       foreign key (customer_id) 
+       references customer
+2026-01-07T12:12:24.916+01:00  INFO 22908 --- [digital-banking] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-07T12:12:26.107+01:00  WARN 22908 --- [digital-banking] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-07T12:12:26.697+01:00  INFO 22908 --- [digital-banking] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@714a4ba2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ddc817f, org.springframework.security.web.context.SecurityContextHolderFilter@7fb313e3, org.springframework.security.web.header.HeaderWriterFilter@21f421b8, org.springframework.web.filter.CorsFilter@764d54a0, org.springframework.security.web.authentication.logout.LogoutFilter@2b33f7a0, com.digitalbanking.security.filters.JwtAuthorizationFilter@78c91d2a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1fd73dcb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@54c697c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5b7d5eca, org.springframework.security.web.session.SessionManagementFilter@78de0f6f, org.springframework.security.web.access.ExceptionTranslationFilter@506654fa, org.springframework.security.web.access.intercept.AuthorizationFilter@64ff0eaa]
+2026-01-07T12:12:27.435+01:00  INFO 22908 --- [digital-banking] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path ''
+2026-01-07T12:12:27.449+01:00  INFO 22908 --- [digital-banking] [           main] c.d.DigitalBankingApplication            : Started DigitalBankingApplication in 11.374 seconds (process running for 13.408)
+2026-01-07T12:12:27.466+01:00  INFO 22908 --- [digital-banking] [           main] c.d.services.BankAccountServiceImpl      : Saving new Customer
+Hibernate: 
+    insert 
+    into
+        customer
+        (email, name, id) 
+    values
+        (?, ?, default)
+2026-01-07T12:12:27.638+01:00  INFO 22908 --- [digital-banking] [           main] c.d.services.BankAccountServiceImpl      : Saving new Customer
+Hibernate: 
+    insert 
+    into
+        customer
+        (email, name, id) 
+    values
+        (?, ?, default)
+2026-01-07T12:12:27.644+01:00  INFO 22908 --- [digital-banking] [           main] c.d.services.BankAccountServiceImpl      : Saving new Customer
+Hibernate: 
+    insert 
+    into
+        customer
+        (email, name, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name 
+    from
+        customer c1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        ca1_0.id,
+        ca1_0.balance,
+        ca1_0.create_date,
+        ca1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ca1_0.status,
+        ca1_0.over_draft 
+    from
+        bank_account ca1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ca1_0.customer_id 
+    where
+        ca1_0.type='CC' 
+        and ca1_0.id=?
+Hibernate: 
+    insert 
+    into
+        bank_account
+        (balance, create_date, currency, customer_id, status, over_draft, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, 'CC', ?)
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        sa1_0.id,
+        sa1_0.balance,
+        sa1_0.create_date,
+        sa1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        sa1_0.status,
+        sa1_0.interest_rate 
+    from
+        bank_account sa1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=sa1_0.customer_id 
+    where
+        sa1_0.type='SA' 
+        and sa1_0.id=?
+Hibernate: 
+    insert 
+    into
+        bank_account
+        (balance, create_date, currency, customer_id, status, interest_rate, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, 'SA', ?)
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        ca1_0.id,
+        ca1_0.balance,
+        ca1_0.create_date,
+        ca1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ca1_0.status,
+        ca1_0.over_draft 
+    from
+        bank_account ca1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ca1_0.customer_id 
+    where
+        ca1_0.type='CC' 
+        and ca1_0.id=?
+Hibernate: 
+    insert 
+    into
+        bank_account
+        (balance, create_date, currency, customer_id, status, over_draft, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, 'CC', ?)
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        sa1_0.id,
+        sa1_0.balance,
+        sa1_0.create_date,
+        sa1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        sa1_0.status,
+        sa1_0.interest_rate 
+    from
+        bank_account sa1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=sa1_0.customer_id 
+    where
+        sa1_0.type='SA' 
+        and sa1_0.id=?
+Hibernate: 
+    insert 
+    into
+        bank_account
+        (balance, create_date, currency, customer_id, status, interest_rate, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, 'SA', ?)
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        ca1_0.id,
+        ca1_0.balance,
+        ca1_0.create_date,
+        ca1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ca1_0.status,
+        ca1_0.over_draft 
+    from
+        bank_account ca1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ca1_0.customer_id 
+    where
+        ca1_0.type='CC' 
+        and ca1_0.id=?
+Hibernate: 
+    insert 
+    into
+        bank_account
+        (balance, create_date, currency, customer_id, status, over_draft, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, 'CC', ?)
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        sa1_0.id,
+        sa1_0.balance,
+        sa1_0.create_date,
+        sa1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        sa1_0.status,
+        sa1_0.interest_rate 
+    from
+        bank_account sa1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=sa1_0.customer_id 
+    where
+        sa1_0.type='SA' 
+        and sa1_0.id=?
+Hibernate: 
+    insert 
+    into
+        bank_account
+        (balance, create_date, currency, customer_id, status, interest_rate, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, 'SA', ?)
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        ba1_0.customer_id,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.create_date,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        create_date=?,
+        currency=?,
+        customer_id=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        app_role
+        (role_name, id) 
+    values
+        (?, default)
+Hibernate: 
+    insert 
+    into
+        app_role
+        (role_name, id) 
+    values
+        (?, default)
+Hibernate: 
+    select
+        au1_0.user_id,
+        au1_0.email,
+        au1_0.password,
+        au1_0.username,
+        r1_0.app_user_user_id,
+        r1_1.id,
+        r1_1.role_name 
+    from
+        app_user au1_0 
+    left join
+        (app_user_roles r1_0 
+    join
+        app_role r1_1 
+            on r1_1.id=r1_0.roles_id) 
+        on au1_0.user_id=r1_0.app_user_user_id 
+    where
+        au1_0.user_id=?
+Hibernate: 
+    insert 
+    into
+        app_user
+        (email, password, username, user_id) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        au1_0.user_id,
+        au1_0.email,
+        au1_0.password,
+        au1_0.username,
+        r1_0.app_user_user_id,
+        r1_1.id,
+        r1_1.role_name 
+    from
+        app_user au1_0 
+    left join
+        (app_user_roles r1_0 
+    join
+        app_role r1_1 
+            on r1_1.id=r1_0.roles_id) 
+        on au1_0.user_id=r1_0.app_user_user_id 
+    where
+        au1_0.user_id=?
+Hibernate: 
+    insert 
+    into
+        app_user
+        (email, password, username, user_id) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        au1_0.user_id,
+        au1_0.email,
+        au1_0.password,
+        au1_0.username 
+    from
+        app_user au1_0 
+    where
+        au1_0.username=?
+Hibernate: 
+    select
+        r1_0.app_user_user_id,
+        r1_1.id,
+        r1_1.role_name 
+    from
+        app_user_roles r1_0 
+    join
+        app_role r1_1 
+            on r1_1.id=r1_0.roles_id 
+    where
+        r1_0.app_user_user_id=?
+Hibernate: 
+    select
+        ar1_0.id,
+        ar1_0.role_name 
+    from
+        app_role ar1_0 
+    where
+        ar1_0.role_name=?
+Hibernate: 
+    insert 
+    into
+        app_user_roles
+        (app_user_user_id, roles_id) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        au1_0.user_id,
+        au1_0.email,
+        au1_0.password,
+        au1_0.username 
+    from
+        app_user au1_0 
+    where
+        au1_0.username=?
+Hibernate: 
+    select
+        r1_0.app_user_user_id,
+        r1_1.id,
+        r1_1.role_name 
+    from
+        app_user_roles r1_0 
+    join
+        app_role r1_1 
+            on r1_1.id=r1_0.roles_id 
+    where
+        r1_0.app_user_user_id=?
+Hibernate: 
+    select
+        ar1_0.id,
+        ar1_0.role_name 
+    from
+        app_role ar1_0 
+    where
+        ar1_0.role_name=?
+Hibernate: 
+    insert 
+    into
+        app_user_roles
+        (app_user_user_id, roles_id) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        au1_0.user_id,
+        au1_0.email,
+        au1_0.password,
+        au1_0.username 
+    from
+        app_user au1_0 
+    where
+        au1_0.username=?
+Hibernate: 
+    select
+        r1_0.app_user_user_id,
+        r1_1.id,
+        r1_1.role_name 
+    from
+        app_user_roles r1_0 
+    join
+        app_role r1_1 
+            on r1_1.id=r1_0.roles_id 
+    where
+        r1_0.app_user_user_id=?
+Hibernate: 
+    select
+        ar1_0.id,
+        ar1_0.role_name 
+    from
+        app_role ar1_0 
+    where
+        ar1_0.role_name=?
+Hibernate: 
+    delete 
+    from
+        app_user_roles 
+    where
+        app_user_user_id=?
+Hibernate: 
+    insert 
+    into
+        app_user_roles
+        (app_user_user_id, roles_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        app_user_roles
+        (app_user_user_id, roles_id) 
+    values
+        (?, ?)
+2026-01-07T12:12:40.980+01:00  INFO 22908 --- [digital-banking] [nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-07T12:12:40.983+01:00  INFO 22908 --- [digital-banking] [nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-07T12:12:40.986+01:00  INFO 22908 --- [digital-banking] [nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-01-07T12:12:41.096+01:00  WARN 22908 --- [digital-banking] [nio-8085-exec-2] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/auth/login' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+Hibernate: 
+    select
+        au1_0.user_id,
+        au1_0.email,
+        au1_0.password,
+        au1_0.username 
+    from
+        app_user au1_0 
+    where
+        au1_0.username=?
+Hibernate: 
+    select
+        r1_0.app_user_user_id,
+        r1_1.id,
+        r1_1.role_name 
+    from
+        app_user_roles r1_0 
+    join
+        app_role r1_1 
+            on r1_1.id=r1_0.roles_id 
+    where
+        r1_0.app_user_user_id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name 
+    from
+        customer c1_0 
+    where
+        c1_0.name like ? escape '\'
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name 
+    from
+        customer c1_0 
+    where
+        c1_0.name like ? escape '\'
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name 
+    from
+        customer c1_0 
+    where
+        c1_0.name like ? escape '\'
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name 
+    from
+        customer c1_0 
+    where
+        c1_0.name like ? escape '\'
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name 
+    from
+        customer c1_0 
+    where
+        c1_0.name like ? escape '\'
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.name 
+    from
+        customer c1_0 
+    where
+        c1_0.name like ? esca
